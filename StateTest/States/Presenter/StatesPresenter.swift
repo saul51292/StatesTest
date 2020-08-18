@@ -10,16 +10,40 @@ import Foundation
 import UIKit
 
 class StatesPresenter: NSObject {
+    //dependencies
     weak var vc: StatesViewController?
     fileprivate let interactor: StatesInteractorType
+    
+    //private state
+    fileprivate var mode: AppearanceMode = .light
     
     init(interactor: StatesInteractorType) {
         self.interactor = interactor
     }
 }
 
+private extension StatesPresenter {
+    @objc func handleDarkMode() {
+        let newMode: AppearanceMode = {
+            switch self.mode {
+            case .light:        return .dark
+            case .dark:         return .light
+            }
+        }()
+        self.mode = newMode
+        self.vc?.configure(mode: newMode)
+        UserDefaults.standard.set(newMode == .dark, forKey: "isDarkMode")
+    }
+}
+
 extension StatesPresenter: StatesPresenterType {
     func handleViewDidLoad() {
+        let isDarkMode = UserDefaults.standard.bool(forKey: "isDarkMode")
+        self.mode = isDarkMode ? .dark : .light
+        self.vc?.configure(mode: isDarkMode ? .dark : .light)
+        
+        self.vc?.set(darkModeTarget: self,
+                     action: #selector(StatesPresenter.handleDarkMode))
         self.vc?.set(tableViewDataSource: self)
         self.vc?.set(tableViewDelegate: self)
     }
@@ -33,6 +57,14 @@ extension StatesPresenter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "StateCell") else { return UITableViewCell() }
         cell.textLabel?.text = self.interactor.states[indexPath.row].name
+        switch self.mode {
+        case .dark:
+            cell.backgroundColor = .black
+            cell.textLabel?.textColor = .white
+        case .light:
+            cell.backgroundColor = .white
+            cell.textLabel?.textColor = .black
+        }
         return cell
     }
 }
