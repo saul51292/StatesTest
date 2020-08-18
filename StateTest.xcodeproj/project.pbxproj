@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		876F70E124EC0A6800F504A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F70E024EC0A6800F504A3 /* AppDelegate.swift */; };
-		876F70E324EC0A6800F504A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F70E224EC0A6800F504A3 /* SceneDelegate.swift */; };
-		876F70E524EC0A6800F504A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F70E424EC0A6800F504A3 /* ViewController.swift */; };
-		876F70E824EC0A6800F504A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876F70E624EC0A6800F504A3 /* Main.storyboard */; };
+		876F70E524EC0A6800F504A3 /* StatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F70E424EC0A6800F504A3 /* StatesViewController.swift */; };
 		876F70EA24EC0A6900F504A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876F70E924EC0A6900F504A3 /* Assets.xcassets */; };
 		876F70ED24EC0A6900F504A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876F70EB24EC0A6900F504A3 /* LaunchScreen.storyboard */; };
 		876F70F824EC0A6900F504A3 /* StateTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F70F724EC0A6900F504A3 /* StateTestTests.swift */; };
 		876F710324EC0A6900F504A3 /* StateTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F710224EC0A6900F504A3 /* StateTestUITests.swift */; };
+		876F711324EC0ABA00F504A3 /* StatesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F711224EC0ABA00F504A3 /* StatesWireframe.swift */; };
+		876F711824EC0AEF00F504A3 /* StatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F711724EC0AEF00F504A3 /* StatesPresenter.swift */; };
+		876F711A24EC0AFB00F504A3 /* StatesPresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F711924EC0AFB00F504A3 /* StatesPresenterType.swift */; };
+		876F711C24EC0B0400F504A3 /* StatesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F711B24EC0B0400F504A3 /* StatesInteractor.swift */; };
+		876F711E24EC0B0F00F504A3 /* StatesInteractorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F711D24EC0B0F00F504A3 /* StatesInteractorType.swift */; };
+		876F712024EC0B3D00F504A3 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F711F24EC0B3D00F504A3 /* State.swift */; };
+		876F712224EC0F1A00F504A3 /* StateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F712124EC0F1A00F504A3 /* StateCell.swift */; };
+		876F712424EC138900F504A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F712324EC138900F504A3 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +43,7 @@
 /* Begin PBXFileReference section */
 		876F70DD24EC0A6800F504A3 /* StateTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		876F70E024EC0A6800F504A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		876F70E224EC0A6800F504A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		876F70E424EC0A6800F504A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		876F70E724EC0A6800F504A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		876F70E424EC0A6800F504A3 /* StatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewController.swift; sourceTree = "<group>"; };
 		876F70E924EC0A6900F504A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		876F70EC24EC0A6900F504A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		876F70EE24EC0A6900F504A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		876F70FE24EC0A6900F504A3 /* StateTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StateTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		876F710224EC0A6900F504A3 /* StateTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTestUITests.swift; sourceTree = "<group>"; };
 		876F710424EC0A6900F504A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		876F711224EC0ABA00F504A3 /* StatesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesWireframe.swift; sourceTree = "<group>"; };
+		876F711724EC0AEF00F504A3 /* StatesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesPresenter.swift; sourceTree = "<group>"; };
+		876F711924EC0AFB00F504A3 /* StatesPresenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesPresenterType.swift; sourceTree = "<group>"; };
+		876F711B24EC0B0400F504A3 /* StatesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesInteractor.swift; sourceTree = "<group>"; };
+		876F711D24EC0B0F00F504A3 /* StatesInteractorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesInteractorType.swift; sourceTree = "<group>"; };
+		876F711F24EC0B3D00F504A3 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		876F712124EC0F1A00F504A3 /* StateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCell.swift; sourceTree = "<group>"; };
+		876F712324EC138900F504A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +111,9 @@
 		876F70DF24EC0A6800F504A3 /* StateTest */ = {
 			isa = PBXGroup;
 			children = (
+				876F711024EC0A9E00F504A3 /* States */,
 				876F70E024EC0A6800F504A3 /* AppDelegate.swift */,
-				876F70E224EC0A6800F504A3 /* SceneDelegate.swift */,
-				876F70E424EC0A6800F504A3 /* ViewController.swift */,
-				876F70E624EC0A6800F504A3 /* Main.storyboard */,
+				876F712324EC138900F504A3 /* SceneDelegate.swift */,
 				876F70E924EC0A6900F504A3 /* Assets.xcassets */,
 				876F70EB24EC0A6900F504A3 /* LaunchScreen.storyboard */,
 				876F70EE24EC0A6900F504A3 /* Info.plist */,
@@ -126,6 +137,53 @@
 				876F710424EC0A6900F504A3 /* Info.plist */,
 			);
 			path = StateTestUITests;
+			sourceTree = "<group>";
+		};
+		876F711024EC0A9E00F504A3 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				876F711624EC0AE300F504A3 /* Interactor */,
+				876F711524EC0AD900F504A3 /* Presenter */,
+				876F711424EC0AC900F504A3 /* View */,
+				876F711124EC0AA800F504A3 /* Wireframe */,
+				876F711F24EC0B3D00F504A3 /* State.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		876F711124EC0AA800F504A3 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				876F711224EC0ABA00F504A3 /* StatesWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		876F711424EC0AC900F504A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				876F70E424EC0A6800F504A3 /* StatesViewController.swift */,
+				876F712124EC0F1A00F504A3 /* StateCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		876F711524EC0AD900F504A3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				876F711724EC0AEF00F504A3 /* StatesPresenter.swift */,
+				876F711924EC0AFB00F504A3 /* StatesPresenterType.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		876F711624EC0AE300F504A3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				876F711B24EC0B0400F504A3 /* StatesInteractor.swift */,
+				876F711D24EC0B0F00F504A3 /* StatesInteractorType.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +292,6 @@
 			files = (
 				876F70ED24EC0A6900F504A3 /* LaunchScreen.storyboard in Resources */,
 				876F70EA24EC0A6900F504A3 /* Assets.xcassets in Resources */,
-				876F70E824EC0A6800F504A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				876F70E524EC0A6800F504A3 /* ViewController.swift in Sources */,
+				876F711824EC0AEF00F504A3 /* StatesPresenter.swift in Sources */,
+				876F711A24EC0AFB00F504A3 /* StatesPresenterType.swift in Sources */,
+				876F70E524EC0A6800F504A3 /* StatesViewController.swift in Sources */,
+				876F711E24EC0B0F00F504A3 /* StatesInteractorType.swift in Sources */,
+				876F712224EC0F1A00F504A3 /* StateCell.swift in Sources */,
+				876F712424EC138900F504A3 /* SceneDelegate.swift in Sources */,
+				876F711324EC0ABA00F504A3 /* StatesWireframe.swift in Sources */,
+				876F711C24EC0B0400F504A3 /* StatesInteractor.swift in Sources */,
 				876F70E124EC0A6800F504A3 /* AppDelegate.swift in Sources */,
-				876F70E324EC0A6800F504A3 /* SceneDelegate.swift in Sources */,
+				876F712024EC0B3D00F504A3 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +361,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		876F70E624EC0A6800F504A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				876F70E724EC0A6800F504A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		876F70EB24EC0A6900F504A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
